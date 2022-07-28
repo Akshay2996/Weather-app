@@ -15,7 +15,7 @@ const Search = ({ onSearchChange }) => {
         return {
           options: response.data.map((city) => {
             return {
-              value: `${city.latitude} ${city.longitude}`,
+              value: `${city.latitude}:${city.longitude}`,
               label: `${city.name}, ${city.countryCode}`
             };
           })
@@ -28,6 +28,7 @@ const Search = ({ onSearchChange }) => {
     setSearch(searchData);
     onSearchChange(searchData);
   };
+
   return (
     <AsyncPaginate
       placeholder="Search for the City"
