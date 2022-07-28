@@ -1,10 +1,13 @@
+import Search from "./components/search/search";
 import "./styles.css";
 
 export default function App() {
+  const handleSearch = (searchData) => {
+    console.log(searchData);
+  };
   return (
-    <div className="App">
-      <h1>Hello CodeSandbox</h1>
-      <h2>Start editing to see some magic happen!</h2>
-    </div>
+    <main className="container">
+      <Search onSearchChange={handleSearch} />
+    </main>
   );
 }
