@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { WEATHER_API_KEY, WEATHER_API_URL } from "./components/api";
 import CurrentWeather from "./components/current-weather/current-weather";
+import Forecast from "./components/forecast/forecast";
 import Search from "./components/search/search";
 import "./styles.css";
 
@@ -29,13 +30,11 @@ export default function App() {
       .catch((err) => console.error(err));
   };
 
-  console.log("Weather", currentWeather);
-  console.log("Forecast", forecast);
-
   return (
     <main className="container">
       <Search onSearchChange={handleSearch} />
-      {currentWeather ? <CurrentWeather data={currentWeather} /> : null}
+      {currentWeather && <CurrentWeather data={currentWeather} />}
+      {forecast && <Forecast data={forecast} />}
     </main>
   );
 }
