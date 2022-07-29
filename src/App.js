@@ -12,15 +12,14 @@ export default function App() {
     const [lat, long] = searchData.value.split(":");
 
     const currentWeatherFetch = fetch(
-      `${WEATHER_API_URL}/weather?lat=${lat}&lon=${long}&appid=${WEATHER_API_KEY}`
+      `${WEATHER_API_URL}/weather?lat=${lat}&lon=${long}&appid=${WEATHER_API_KEY}&units=metric`
     );
     const forecastFetch = fetch(
-      `${WEATHER_API_URL}/forecast?lat=${lat}&lon=${long}&appid=${WEATHER_API_KEY}`
+      `${WEATHER_API_URL}/forecast?lat=${lat}&lon=${long}&appid=${WEATHER_API_KEY}&units=metric`
     );
 
     Promise.allSettled([currentWeatherFetch, forecastFetch])
       .then(async (response) => {
-        console.log(response);
         const weatherResponse = await response[0].value.json();
         const forecastResponse = await response[1].value.json();
 
@@ -36,7 +35,7 @@ export default function App() {
   return (
     <main className="container">
       <Search onSearchChange={handleSearch} />
-      <CurrentWeather />
+      {currentWeather ? <CurrentWeather data={currentWeather} /> : null}
     </main>
   );
 }
