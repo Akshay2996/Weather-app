@@ -15,7 +15,7 @@ React app that shows the current weather and forecast of 7 days of cities that h
 
 ## Deployment
 
-Deployed the project to Netlify. See the [Site]()
+Deployed the project to Netlify. See the [Site](https://cityweather-details.netlify.app/)
 
 ## Run Locally
 
@@ -29,7 +29,7 @@ Go to the project directory & Install dependencies
 
 ```bash
   cd Weather-app
-  npm install
+  npm install --force
 ```
 
 Start the server
@@ -38,4 +38,4 @@ Start the server
   npm run start
 ```
 
-**Note:** Get your API keys from the API website and store it in .env file. Sample given.
+**Note:** Get your API keys from the API website and store it in `.env` file.
