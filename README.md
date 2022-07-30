@@ -15,7 +15,7 @@ React app that shows the current weather and forecast of 7 days of cities that h
 
 ## Deployment
 
-Deployed the project to Netlify. See the [Site](https://cityweather-details.netlify.app/)
+Deployed the project to Netlify. See the [Site](https://csb-s4j8xq.netlify.app/)
 
 ## Run Locally
 
