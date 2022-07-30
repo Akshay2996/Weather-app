@@ -15,7 +15,7 @@ React app that shows the current weather and forecast of 7 days of cities that h
 
 ## Deployment
 
-Deployed the project to Netlify. See the [Site](https://sabkabazaar-shopping.netlify.app/)
+Deployed the project to Netlify. See the [Site]()
 
 ## Run Locally
 
@@ -38,4 +38,4 @@ Start the server
   npm run start
 ```
 
-**Note:** Create your API keys on the API website to make the API work.
+**Note:** Get your API keys from the API website and store it in .env file. Sample given.
