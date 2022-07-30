@@ -3,7 +3,9 @@
 React app that shows the current weather and forecast of 7 days of cities that have minimum population of 1 million people.
 
 **APIs**
+
 💻 OpenWeather API: https://openweathermap.org/
+
 💻 GeoDB Cities API: https://rapidapi.com/wirefreethought/api/geodb-cities/
 
 **Dependencies**
